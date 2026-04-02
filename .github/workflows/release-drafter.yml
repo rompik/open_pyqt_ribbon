@@ -17,6 +17,8 @@ jobs:
       contents: write  # for release-drafter/release-drafter to create a github release
       pull-requests: write  # for release-drafter/release-drafter to add label to PR
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       # (Optional) GitHub Enterprise requires GHE_HOST variable set
       #- name: Set GHE_HOST

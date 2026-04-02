@@ -3,7 +3,6 @@ prune docs
 prune examples
 prune tests
 
-exclude .clang-format
 exclude .flake8
 exclude .gitignore
 exclude .pre-commit-config.yaml

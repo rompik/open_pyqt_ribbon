@@ -140,6 +140,4 @@ Thumbs.db
 # Project-specific
 pyqtribbon/_version.py
 docs/source/apidoc
-cmake-*/
-CMakeLists.txt.user
 .pdm-python
