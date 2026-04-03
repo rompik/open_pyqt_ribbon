@@ -1,0 +1,377 @@
+{
+  "schemaVersion": "2.0",
+  "minAppVersion": "1.0",
+  "resources": {
+    "labels": {
+      "en": {
+        "app.title": "Microsoft Word",
+        "app.tooltip": "Microsoft Word",
+        "tab.home": "Home",
+        "grp.clipboard": "Clipboard",
+        "grp.font": "Font",
+        "cmd.undo": "Undo",
+        "cmd.redo": "Redo",
+        "cmd.language": "Language",
+        "lang.en": "English",
+        "lang.ru": "Russian",
+        "cmd.paste": "Paste",
+        "cmd.pasteSpecial": "Paste Special",
+        "cmd.pasteAsText": "Paste as Text",
+        "cmd.cut": "Cut",
+        "cmd.copy": "Copy",
+        "cmd.formatPainter": "Format Painter",
+        "cmd.bold": "Bold",
+        "cmd.italic": "Italic",
+        "cmd.underline": "Underline",
+        "cmd.strikethrough": "Strikethrough",
+        "cmd.superscript": "Superscript",
+        "cmd.subscript": "Subscript",
+        "cmd.fontGrow": "Increase Font Size",
+        "cmd.fontShrink": "Decrease Font Size",
+        "cmd.fontFamily": "Font",
+        "cmd.fontSize": "Font Size"
+      },
+      "ru": {
+        "app.title": "Microsoft Word",
+        "app.tooltip": "Microsoft Word",
+        "tab.home": "Главная",
+        "grp.clipboard": "Буфер обмена",
+        "grp.font": "Шрифт",
+        "cmd.undo": "Отменить",
+        "cmd.redo": "Повторить",
+        "cmd.language": "Язык",
+        "lang.en": "Английский",
+        "lang.ru": "Русский",
+        "cmd.paste": "Вставить",
+        "cmd.pasteSpecial": "Специальная вставка",
+        "cmd.pasteAsText": "Вставить как текст",
+        "cmd.cut": "Вырезать",
+        "cmd.copy": "Копировать",
+        "cmd.formatPainter": "Формат по образцу",
+        "cmd.bold": "Полужирный",
+        "cmd.italic": "Курсив",
+        "cmd.underline": "Подчеркнутый",
+        "cmd.strikethrough": "Зачеркнутый",
+        "cmd.superscript": "Надстрочный",
+        "cmd.subscript": "Подстрочный",
+        "cmd.fontGrow": "Увеличить шрифт",
+        "cmd.fontShrink": "Уменьшить шрифт",
+        "cmd.fontFamily": "Шрифт",
+        "cmd.fontSize": "Размер шрифта"
+      }
+    },
+    "icons": {
+      "ico.undo": "undo.png",
+      "ico.redo": "redo.png",
+      "ico.paste": "paste.png",
+      "ico.pasteSpecial": "paste-special.png",
+      "ico.pasteAsText": "paste-as-text.png",
+      "ico.cut": "cut.png",
+      "ico.copy": "copy.png",
+      "ico.formatPainter": "painter.png",
+      "ico.bold": "bold.png",
+      "ico.italic": "italic.png",
+      "ico.underline": "underline.png",
+      "ico.strikethrough": "strikethrough.png",
+      "ico.superscript": "superscript.png",
+      "ico.subscript": "subscript.png",
+      "ico.fontGrow": "increase-font.png",
+      "ico.fontShrink": "decrease-font.png"
+    }
+  },
+  "commands": [
+    {
+      "id": "cmd.undo",
+      "kind": "button",
+      "labelKey": "cmd.undo",
+      "iconKey": "ico.undo",
+      "execute": "edit.undo"
+    },
+    {
+      "id": "cmd.redo",
+      "kind": "button",
+      "labelKey": "cmd.redo",
+      "iconKey": "ico.redo",
+      "execute": "edit.redo"
+    },
+    {
+      "id": "cmd.language",
+      "kind": "menuButton",
+      "labelKey": "cmd.language",
+      "execute": "ui.languageMenu"
+    },
+    {
+      "id": "cmd.paste",
+      "kind": "button",
+      "labelKey": "cmd.paste",
+      "iconKey": "ico.paste",
+      "execute": "clipboard.paste"
+    },
+    {
+      "id": "cmd.pasteSpecial",
+      "kind": "button",
+      "labelKey": "cmd.pasteSpecial",
+      "iconKey": "ico.pasteSpecial",
+      "execute": "clipboard.pasteSpecial"
+    },
+    {
+      "id": "cmd.pasteAsText",
+      "kind": "button",
+      "labelKey": "cmd.pasteAsText",
+      "iconKey": "ico.pasteAsText",
+      "execute": "clipboard.pasteAsText"
+    },
+    {
+      "id": "cmd.cut",
+      "kind": "button",
+      "labelKey": "cmd.cut",
+      "iconKey": "ico.cut",
+      "execute": "clipboard.cut"
+    },
+    {
+      "id": "cmd.copy",
+      "kind": "button",
+      "labelKey": "cmd.copy",
+      "iconKey": "ico.copy",
+      "execute": "clipboard.copy"
+    },
+    {
+      "id": "cmd.formatPainter",
+      "kind": "button",
+      "labelKey": "cmd.formatPainter",
+      "iconKey": "ico.formatPainter",
+      "execute": "format.painter"
+    },
+    {
+      "id": "cmd.bold",
+      "kind": "toggle",
+      "labelKey": "cmd.bold",
+      "iconKey": "ico.bold",
+      "execute": "font.bold",
+      "checkedWhen": "selection.bold == true"
+    },
+    {
+      "id": "cmd.italic",
+      "kind": "toggle",
+      "labelKey": "cmd.italic",
+      "iconKey": "ico.italic",
+      "execute": "font.italic",
+      "checkedWhen": "selection.italic == true"
+    },
+    {
+      "id": "cmd.underline",
+      "kind": "toggle",
+      "labelKey": "cmd.underline",
+      "iconKey": "ico.underline",
+      "execute": "font.underline",
+      "checkedWhen": "selection.underline == true"
+    },
+    {
+      "id": "cmd.strikethrough",
+      "kind": "toggle",
+      "labelKey": "cmd.strikethrough",
+      "iconKey": "ico.strikethrough",
+      "execute": "font.strikethrough",
+      "checkedWhen": "selection.strikethrough == true"
+    },
+    {
+      "id": "cmd.superscript",
+      "kind": "toggle",
+      "labelKey": "cmd.superscript",
+      "iconKey": "ico.superscript",
+      "execute": "font.superscript",
+      "checkedWhen": "selection.superscript == true"
+    },
+    {
+      "id": "cmd.subscript",
+      "kind": "toggle",
+      "labelKey": "cmd.subscript",
+      "iconKey": "ico.subscript",
+      "execute": "font.subscript",
+      "checkedWhen": "selection.subscript == true"
+    },
+    {
+      "id": "cmd.fontGrow",
+      "kind": "button",
+      "labelKey": "cmd.fontGrow",
+      "iconKey": "ico.fontGrow",
+      "execute": "font.increase"
+    },
+    {
+      "id": "cmd.fontShrink",
+      "kind": "button",
+      "labelKey": "cmd.fontShrink",
+      "iconKey": "ico.fontShrink",
+      "execute": "font.decrease"
+    },
+    {
+      "id": "cmd.fontFamily",
+      "kind": "fontCombo",
+      "labelKey": "cmd.fontFamily",
+      "execute": "font.familyChanged",
+      "layout": {
+        "colSpan": 5,
+        "fixedHeight": true
+      }
+    },
+    {
+      "id": "cmd.fontSize",
+      "kind": "combo",
+      "labelKey": "cmd.fontSize",
+      "execute": "font.sizeChanged",
+      "items": [
+        "8",
+        "9",
+        "10"
+      ],
+      "layout": {
+        "fixedHeight": true,
+        "mode": "rowWise"
+      }
+    }
+  ],
+  "menus": [
+    {
+      "id": "menu.paste",
+      "items": [
+        {
+          "commandRef": "cmd.pasteSpecial"
+        },
+        {
+          "commandRef": "cmd.pasteAsText"
+        }
+      ]
+    },
+    {
+      "id": "menu.language",
+      "items": [
+        {
+          "id": "lang.en",
+          "labelKey": "lang.en",
+          "execute": "ui.setLanguage:en"
+        },
+        {
+          "id": "lang.ru",
+          "labelKey": "lang.ru",
+          "execute": "ui.setLanguage:ru"
+        }
+      ]
+    }
+  ],
+  "ui": {
+    "quickAccess": [
+      {
+        "commandRef": "cmd.undo"
+      },
+      {
+        "commandRef": "cmd.redo"
+      },
+      {
+        "commandRef": "cmd.language",
+        "menuRef": "menu.language"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "tab.home",
+        "labelKey": "tab.home",
+        "order": 100,
+        "groups": [
+          {
+            "id": "grp.clipboard",
+            "labelKey": "grp.clipboard",
+            "priority": 10,
+            "items": [
+              {
+                "commandRef": "cmd.paste",
+                "size": "large",
+                "menuRef": "menu.paste"
+              },
+              {
+                "commandRef": "cmd.cut",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.copy",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.formatPainter",
+                "size": "small",
+                "showText": false
+              }
+            ]
+          },
+          {
+            "id": "grp.font",
+            "labelKey": "grp.font",
+            "priority": 20,
+            "items": [
+              {
+                "commandRef": "cmd.fontFamily",
+                "width": "wide"
+              },
+              {
+                "commandRef": "cmd.bold",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.italic",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.underline",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.strikethrough",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.superscript",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.subscript",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.fontGrow",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.fontShrink",
+                "size": "small",
+                "showText": false
+              },
+              {
+                "commandRef": "cmd.fontSize",
+                "size": "small"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "policies": {
+    "contexts": [
+      {
+        "id": "readOnly",
+        "disable": [
+          "cmd.paste",
+          "cmd.cut"
+        ]
+      }
+    ]
+  }
+}
